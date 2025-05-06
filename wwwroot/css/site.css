@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Задает минимальную высоту для body */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Расположение элементов в столбик */
+    max-width: 400px; /* Ограничение ширины формы */
+    margin: auto; /* Центрирование формы */
+}
+
+label {
+    margin-bottom: 5px; /* Отступ между меткой и полем ввода */
+    margin-left: 10px; /* Отступ слева для меток */
+}
+
+input, select {
+    margin-bottom: 15px; /* Отступ между полями ввода */
+    padding: 8px; /* Отступ внутри полей ввода */
+    border: 1px solid #ccc; /* Граница полей ввода */
+    border-radius: 4px; /* Закруглённые углы */
+    margin-left: 15px; /* Отступ слева для полей ввода */
+}
+
+button {
+    padding: 10px; /* Отступ внутри кнопки */
+    background-color: #28a745; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Без границы */
+    border-radius: 4px; /* Закруглённые углы */
+    cursor: pointer; /* Указатель при наведении */
+    margin-left: 10px; /* Отступ слева для кнопки */
+}
+
+    button:hover {
+        background-color: #218838; /* Цвет фона кнопки при наведении */
+    }
+
+footer {
+    background-color: #f1f1f1; /* Цвет фона футера */
+    text-align: center; /* Выравнивание текста по центру */
+    padding: 10px 0; /* Отступы сверху и снизу */
+}
+
+#result {
+    margin-top: 20px; /* Отступ сверху для результата */
+    font-weight: bold; /* Жирный шрифт для результата */
+}

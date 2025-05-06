@@ -1,0 +1,44 @@
+﻿@model ProjectModel
+
+<h2>Расчёт материалов для строительства</h2>
+
+<form method="post" action="/Calculate/Calculate">
+    <label for="landCost">Стоимость участка:</label>
+    <input type="number" id="landCost" name="LandCost" required />
+
+    <label for="materialType">Выберите материал:</label>
+    <select id="materialType" name="MaterialType">
+        <option value="Wood">Дерево</option>
+        <option value="Brick">Кирпич</option>
+        <option value="GasBlock">Газоблок</option>
+    </select>
+
+    <label for="materialCost">Стоимость материала (1м³/кирпича):</label>
+    <input type="number" id="materialCost" name="MaterialCost" required />
+
+    <label for="length">Длина дома:</label>
+    <input type="number" id="length" name="Length" required />
+
+    <label for="width">Ширина дома:</label>
+    <input type="number" id="width" name="Width" required />
+
+    <label for="height">Высота дома:</label>
+    <input type="number" id="height" name="Height" required />
+
+    <label for="foundationType">Тип фундамента:</label>
+    <select id="foundationType" name="FoundationType">
+        <option value="Pile">Свайный</option>
+        <option value="Strip">Ленточный</option>
+        <option value="Plate">Плитный</option>
+    </select>
+
+    <label for="windowCount">Количество окон:</label>
+    <input type="number" id="windowCount" name="WindowCount" required />
+
+    <button type="submit" style="background-color: orange;">Рассчитать</button>
+</form>
+
+@if (ViewBag.TotalMaterial != null)
+{
+    <h3>Общее количество материала: @ViewBag.TotalMaterial м³</h3>
+}

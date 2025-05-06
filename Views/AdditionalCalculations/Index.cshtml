@@ -1,0 +1,21 @@
+﻿@model AdditionalCalculationsModel
+
+<h2>Дополнительные расчёты</h2>
+
+<form method="post" action="/AdditionalCalculations/Calculate">
+
+    <label for="sauna">Будет ли сауна?</label>
+    <input type="checkbox" id="sauna" name="Sauna" />
+
+    <label for="fence">Будет ли забор?</label>
+    <input type="checkbox" id="fence" name="Fence" />
+
+    <label for="electricity">Подвод электричества?</label>
+    <input type="checkbox" id="electricity" name="Electricity" />
+
+    <label for="wellOrPit">Скважина или колодец?</label>
+    <input type="checkbox" id="wellOrPit" name="WellOrPit" />
+
+    <button type="submit">Рассчитать дополнительные услуги</button>
+</form>
+
