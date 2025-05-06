@@ -1,79 +1,71 @@
+/* Общие стили для всего документа */
 body {
+    font-family: Arial, sans-serif; /* Шрифт для всего документа */
+    line-height: 1.6; /* Высота строки */
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Задает минимальную высоту для body */
+    background-color: #f4f4f4; /* Фоновый цвет страницы */
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+/* Стили для заголовков */
+h2 {
+    text-align: center; /* Центрируем заголовок */
+    color: #333; /* Цвет заголовка */
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-    nav ul li {
-        display: inline;
-        margin: 0 15px;
-    }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-main {
-    padding: 20px;
-    flex: 1;
-}
-
+/* Стили для формы */
 form {
-    display: flex;
-    flex-direction: column; /* Расположение элементов в столбик */
-    max-width: 400px; /* Ограничение ширины формы */
-    margin: auto; /* Центрирование формы */
+    max-width: 600px; /* Ограничиваем ширину формы */
+    margin: 20px auto; /* Центрируем форму с отступами сверху и снизу */
+    padding: 20px; /* Внутренние отступы формы */
+    background-color: #fff; /* Фоновый цвет формы */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для формы */
 }
 
+/* Стили для групп элементов формы */
+.form-group {
+    margin-bottom: 15px; /* Отступ между элементами */
+}
+
+/* Стили для меток формы */
 label {
+    display: block; /* Метки занимают всю ширину */
     margin-bottom: 5px; /* Отступ между меткой и полем ввода */
-    margin-left: 10px; /* Отступ слева для меток */
+    color: #555; /* Цвет меток */
 }
 
-input, select {
-    margin-bottom: 15px; /* Отступ между полями ввода */
-    padding: 8px; /* Отступ внутри полей ввода */
+/* Стили для полей ввода и текстовых областей */
+input[type="number"],
+select {
+    width: 100%; /* Поля занимают всю ширину родительского элемента */
+    padding: 10px; /* Внутренние отступы полей ввода */
     border: 1px solid #ccc; /* Граница полей ввода */
-    border-radius: 4px; /* Закруглённые углы */
-    margin-left: 15px; /* Отступ слева для полей ввода */
+    border-radius: 4px; /* Скругленные углы полей ввода */
+    font-size: 16px; /* Размер шрифта */
 }
 
+/* Стили для кнопок отправки */
 button {
-    padding: 10px; /* Отступ внутри кнопки */
-    background-color: #28a745; /* Цвет фона кнопки */
+    display: block; /* Кнопка занимает всю ширину родительского элемента */
+    width: 100%; /* Ширина кнопки на всю ширину формы */
+    padding: 10px; /* Внутренние отступы кнопки */
+    background-color: orange; /* Цвет фона кнопки (оранжевый) */
     color: white; /* Цвет текста кнопки */
     border: none; /* Без границы */
-    border-radius: 4px; /* Закруглённые углы */
-    cursor: pointer; /* Указатель при наведении */
-    margin-left: 10px; /* Отступ слева для кнопки */
+    border-radius: 4px; /* Скругленные углы кнопки */
+    font-size: 16px; /* Размер шрифта кнопки */
+    cursor: pointer; /* Курсор при наведении на кнопку */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона при наведении */
 }
 
     button:hover {
-        background-color: #218838; /* Цвет фона кнопки при наведении */
+        background-color: darkorange; /* Цвет фона кнопки при наведении (темнее оранжевого) */
     }
 
-footer {
-    background-color: #f1f1f1; /* Цвет фона футера */
-    text-align: center; /* Выравнивание текста по центру */
-    padding: 10px 0; /* Отступы сверху и снизу */
-}
-
-#result {
-    margin-top: 20px; /* Отступ сверху для результата */
-    font-weight: bold; /* Жирный шрифт для результата */
+/* Стили для успешного сообщения после отправки формы */
+.success-message {
+    text-align: center; /* Центрируем сообщение об успехе */
+    color: #28a745; /* Цвет текста успешного сообщения (зеленый) */
+    margin-top: 20px; /* Отступ сверху для сообщения */
 }

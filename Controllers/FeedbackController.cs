@@ -25,7 +25,7 @@ namespace DiplomaProject_ITMO.Controllers
             {
                 _context.Feedbacks.Add(feedback);
                 _context.SaveChanges();
-                return RedirectToAction("ThankYou");
+                return RedirectToAction("Ваше сообщение отправлено");
             }
             return View("Index", feedback);
         }

@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/DiplomaProject_ITMO/css/site.0x62zd5s8j.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"0x62zd5s8j"},{"Name":"integrity","Value":"sha256-fMlkHJzfjqCpKopphSy1\u002Bz56qTKL7Y0xafcS3csquLI="},{"Name":"label","Value":"_content/DiplomaProject_ITMO/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2490"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022fMlkHJzfjqCpKopphSy1\u002Bz56qTKL7Y0xafcS3csquLI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 20:20:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/DiplomaProject_ITMO/css/site.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-o9ttsD5o787/braXaIpng/IXpGf3ZFmIw/ub5NUIW/U="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1933"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022o9ttsD5o787/braXaIpng/IXpGf3ZFmIw/ub5NUIW/U=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 20:42:09 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/DiplomaProject_ITMO/css/site.d8ruvslivz.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"d8ruvslivz"},{"Name":"integrity","Value":"sha256-o9ttsD5o787/braXaIpng/IXpGf3ZFmIw/ub5NUIW/U="},{"Name":"label","Value":"_content/DiplomaProject_ITMO/css/site.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1933"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022o9ttsD5o787/braXaIpng/IXpGf3ZFmIw/ub5NUIW/U=\u0022"},{"Name":"Last-Modified","Value":"Mon, 05 May 2025 20:42:09 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-fMlkHJzfjqCpKopphSy1\u002Bz56qTKL7Y0xafcS3csquLI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2490"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022fMlkHJzfjqCpKopphSy1\u002Bz56qTKL7Y0xafcS3csquLI=\u0022"},{"Name":"Last-Modified","Value":"Tue, 06 May 2025 20:20:31 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/DiplomaProject_ITMO/DiplomaProject_ITMO.a2xi5stbbe.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\DiplomaProject_ITMO.a2xi5stbbe.bundle.scp.css'))</AssetFile>

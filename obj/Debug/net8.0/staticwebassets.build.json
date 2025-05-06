@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FxGds35zlgaWxePocqA+s6aqOL/bQnw0i1YCWNclgS8=",
+  "Hash": "OI/flYfCVnC2uDKEmZ4kZzyzwgzeFhfmwI2u8Cn601U=",
   "Source": "DiplomaProject_ITMO",
   "BasePath": "_content/DiplomaProject_ITMO",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "d8ruvslivz",
-      "Integrity": "o9ttsD5o787/braXaIpng/IXpGf3ZFmIw/ub5NUIW/U=",
+      "Fingerprint": "0x62zd5s8j",
+      "Integrity": "fMlkHJzfjqCpKopphSy1+z56qTKL7Y0xafcS3csquLI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1321,6 +1321,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.0x62zd5s8j.css",
+      "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2490"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fMlkHJzfjqCpKopphSy1+z56qTKL7Y0xafcS3csquLI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 06 May 2025 20:20:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0x62zd5s8j"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fMlkHJzfjqCpKopphSy1+z56qTKL7Y0xafcS3csquLI="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1331,7 +1376,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1933"
+          "Value": "2490"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1384,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"o9ttsD5o787/braXaIpng/IXpGf3ZFmIw/ub5NUIW/U=\""
+          "Value": "\"fMlkHJzfjqCpKopphSy1+z56qTKL7Y0xafcS3csquLI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 20:42:09 GMT"
+          "Value": "Tue, 06 May 2025 20:20:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,52 +1398,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-o9ttsD5o787/braXaIpng/IXpGf3ZFmIw/ub5NUIW/U="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.d8ruvslivz.css",
-      "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1933"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"o9ttsD5o787/braXaIpng/IXpGf3ZFmIw/ub5NUIW/U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 05 May 2025 20:42:09 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "d8ruvslivz"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-o9ttsD5o787/braXaIpng/IXpGf3ZFmIw/ub5NUIW/U="
+          "Value": "sha256-fMlkHJzfjqCpKopphSy1+z56qTKL7Y0xafcS3csquLI="
         }
       ]
     },
