@@ -1,44 +1,130 @@
-﻿@model ProjectModel
+﻿@model DiplomaProject_ITMO.Models.ProjectModel
+
+@{
+    ViewData["Title"] = "Расчёт материалов для строительства";
+}
 
 <h2>Расчёт материалов для строительства</h2>
 
-<form method="post" action="/Calculate/Calculate">
-    <label for="landCost">Стоимость участка:</label>
-    <input type="number" id="landCost" name="LandCost" required />
+<form method="post" asp-controller="Calculate" asp-action="Calculate">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-    <label for="materialType">Выберите материал:</label>
-    <select id="materialType" name="MaterialType">
-        <option value="Wood">Дерево</option>
-        <option value="Brick">Кирпич</option>
-        <option value="GasBlock">Газоблок</option>
-    </select>
+    <div class="form-group">
+        <label asp-for="LandCost"></label>
+        <input asp-for="LandCost" class="form-control" />
+        <span asp-validation-for="LandCost" class="text-danger"></span>
+    </div>
 
-    <label for="materialCost">Стоимость материала (1м³/кирпича):</label>
-    <input type="number" id="materialCost" name="MaterialCost" required />
+    <div class="form-group">
+        <label asp-for="MaterialType"></label>
+        <select asp-for="MaterialType" class="form-control">
+            <option value="Wood">Дерево</option>
+            <option value="Brick">Кирпич</option>
+            <option value="GasBlock">Газоблок</option>
+        </select>
+        <span asp-validation-for="MaterialType" class="text-danger"></span>
+    </div>
 
-    <label for="length">Длина дома:</label>
-    <input type="number" id="length" name="Length" required />
+    <div class="form-group">
+        <label asp-for="MaterialCost"><span id="materialCostLabel">Стоимость материала (1м³):</span></label>
+        <input asp-for="MaterialCost" class="form-control" />
+        <span asp-validation-for="MaterialCost" class="text-danger"></span>
+    </div>
 
-    <label for="width">Ширина дома:</label>
-    <input type="number" id="width" name="Width" required />
+    <div class="form-group">
+        <label asp-for="Length"></label>
+        <input asp-for="Length" class="form-control" />
+        <span asp-validation-for="Length" class="text-danger"></span>
+    </div>
 
-    <label for="height">Высота дома:</label>
-    <input type="number" id="height" name="Height" required />
+    <div class="form-group">
+        <label asp-for="Width"></label>
+        <input asp-for="Width" class="form-control" />
+        <span asp-validation-for="Width" class="text-danger"></span>
+    </div>
 
-    <label for="foundationType">Тип фундамента:</label>
-    <select id="foundationType" name="FoundationType">
-        <option value="Pile">Свайный</option>
-        <option value="Strip">Ленточный</option>
-        <option value="Plate">Плитный</option>
-    </select>
+    <div class="form-group">
+        <label asp-for="Height"></label>
+        <input asp-for="Height" class="form-control" />
+        <span asp-validation-for="Height" class="text-danger"></span>
+    </div>
 
-    <label for="windowCount">Количество окон:</label>
-    <input type="number" id="windowCount" name="WindowCount" required />
+    <div class="form-group">
+        <label asp-for="FoundationType"></label>
+        <select asp-for="FoundationType" class="form-control">
+            <option value="Pile">Свайный</option>
+            <option value="Strip">Ленточный</option>
+            <option value="Plate">Плитный</option>
+        </select>
+        <span asp-validation-for="FoundationType" class="text-danger"></span>
+    </div>
 
-    <button type="submit" style="background-color: orange;">Рассчитать</button>
+    <div class="form-group">
+        <label asp-for="WindowCount"></label>
+        <input asp-for="WindowCount" class="form-control" />
+        <span asp-validation-for="WindowCount" class="text-danger"></span>
+    </div>
+
+    <hr />
+    <h3>Дополнительные расчеты:</h3>
+
+    <div class="form-group">
+        <div class="form-check">
+            <input asp-for="HasSauna" class="form-check-input" />
+            <label class="form-check-label" asp-for="HasSauna">Сауна на участке</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="form-check">
+            <input asp-for="HasFence" class="form-check-input" />
+            <label class="form-check-label" asp-for="HasFence">Забор на участке</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="form-check">
+            <input asp-for="NeedsElectricity" class="form-check-input" />
+            <label class="form-check-label" asp-for="NeedsElectricity">Подвод электричества</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="form-check">
+            <input asp-for="HasWaterSupply" class="form-check-input" />
+            <label class="form-check-label" asp-for="HasWaterSupply">Подвод водопровода</label>
+        </div>
+    </div>
+
+    <button type="submit" style="background-color: orange;" class="btn btn-primary">Рассчитать</button>
 </form>
 
-@if (ViewBag.TotalMaterial != null)
+@if (ViewData.ModelState.IsValid && ViewBag.TotalMaterial != null && ViewBag.TotalCost != null)
 {
     <h3>Общее количество материала: @ViewBag.TotalMaterial м³</h3>
+    <h3>Общая стоимость проекта: @ViewBag.TotalCost рублей</h3>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            function updateMaterialCostLabel() {
+                var selectedMaterial = $('#materialType').val();
+                var labelText = "";
+
+                if (selectedMaterial === "Wood") {
+                    labelText = "Стоимость материала (1м³):";
+                } else {
+                    labelText = "Стоимость материала (штука):";
+                }
+                $('#materialCostLabel').text(labelText);
+            }
+
+            updateMaterialCostLabel();
+
+            $('#materialType').change(function () {
+                updateMaterialCostLabel();
+            });
+        });
+    </script>
 }

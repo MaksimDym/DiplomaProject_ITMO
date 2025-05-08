@@ -1,71 +1,92 @@
 /* Общие стили для всего документа */
 body {
-    font-family: Arial, sans-serif; /* Шрифт для всего документа */
-    line-height: 1.6; /* Высота строки */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Фоновый цвет страницы */
+    background-color: #f4f4f4;
 }
 
 /* Стили для заголовков */
 h2 {
-    text-align: center; /* Центрируем заголовок */
-    color: #333; /* Цвет заголовка */
+    text-align: center;
+    color: #333;
 }
 
 /* Стили для формы */
 form {
-    max-width: 600px; /* Ограничиваем ширину формы */
-    margin: 20px auto; /* Центрируем форму с отступами сверху и снизу */
-    padding: 20px; /* Внутренние отступы формы */
-    background-color: #fff; /* Фоновый цвет формы */
-    border-radius: 8px; /* Скругленные углы */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для формы */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px; /* Уменьшено значение padding */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Стили для групп элементов формы */
 .form-group {
-    margin-bottom: 15px; /* Отступ между элементами */
+    margin-bottom: 10px; /* Уменьшено значение margin-bottom */
 }
 
 /* Стили для меток формы */
 label {
-    display: block; /* Метки занимают всю ширину */
-    margin-bottom: 5px; /* Отступ между меткой и полем ввода */
-    color: #555; /* Цвет меток */
+    display: block;
+    margin-bottom: 3px; /* Уменьшено значение margin-bottom */
+    color: #555;
+    font-size: 0.9rem; /*Немного уменьшим размер шрифта меток*/
 }
 
 /* Стили для полей ввода и текстовых областей */
 input[type="number"],
 select {
-    width: 100%; /* Поля занимают всю ширину родительского элемента */
-    padding: 10px; /* Внутренние отступы полей ввода */
-    border: 1px solid #ccc; /* Граница полей ввода */
-    border-radius: 4px; /* Скругленные углы полей ввода */
-    font-size: 16px; /* Размер шрифта */
+    width: 100%;
+    padding: 8px; /* Уменьшено значение padding */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Уменьшен размер шрифта */
 }
 
 /* Стили для кнопок отправки */
 button {
-    display: block; /* Кнопка занимает всю ширину родительского элемента */
-    width: 100%; /* Ширина кнопки на всю ширину формы */
-    padding: 10px; /* Внутренние отступы кнопки */
-    background-color: orange; /* Цвет фона кнопки (оранжевый) */
-    color: white; /* Цвет текста кнопки */
-    border: none; /* Без границы */
-    border-radius: 4px; /* Скругленные углы кнопки */
-    font-size: 16px; /* Размер шрифта кнопки */
-    cursor: pointer; /* Курсор при наведении на кнопку */
-    transition: background-color 0.3s ease; /* Плавный переход цвета фона при наведении */
+    display: block;
+    width: 100%;
+    padding: 8px; /* Уменьшено значение padding */
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px; /* Уменьшен размер шрифта */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
     button:hover {
-        background-color: darkorange; /* Цвет фона кнопки при наведении (темнее оранжевого) */
+        background-color: darkorange;
     }
 
 /* Стили для успешного сообщения после отправки формы */
 .success-message {
-    text-align: center; /* Центрируем сообщение об успехе */
-    color: #28a745; /* Цвет текста успешного сообщения (зеленый) */
-    margin-top: 20px; /* Отступ сверху для сообщения */
+    text-align: center;
+    color: #28a745;
+    margin-top: 15px; /* Уменьшено значение margin-top */
+}
+
+/* Увеличиваем отступы между элементами навигации */
+.nav-item {
+    margin-right: 40px;
+}
+
+    /* Убираем отступ у последнего элемента навигации */
+    .nav-item:last-child {
+        margin-right: 0;
+    }
+
+/* Добавляем отступ слева */
+.left-margin {
+    margin-left: 20px;
+}
+
+/* Уменьшаем отступы в подвале */
+.footer {
+    padding: 2px;
 }

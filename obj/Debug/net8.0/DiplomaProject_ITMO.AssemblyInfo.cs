@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiplomaProject_ITMO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c5a5852cfe465fa36fe35a753f748ee3d0c9fc7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6b5fa70273010616ba93c680de7ed36a34a0707")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiplomaProject_ITMO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiplomaProject_ITMO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
