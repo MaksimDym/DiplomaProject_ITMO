@@ -16,7 +16,7 @@ namespace DiplomaProject_ITMO.Models
             modelBuilder.Entity<FeedbackModel>()
                 .HasKey(f => f.Id); 
 
-           
+          
         }
     }
 }

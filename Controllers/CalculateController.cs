@@ -6,12 +6,10 @@ namespace DiplomaProject_ITMO.Controllers
     public class CalculateController : Controller
     {
         private readonly ApplicationDbContext _context;
-
         public CalculateController(ApplicationDbContext context)
         {
             _context = context;
         }
-
         [HttpGet]
         public IActionResult Index()
         {
@@ -23,7 +21,7 @@ namespace DiplomaProject_ITMO.Controllers
         {
             if (ModelState.IsValid)
             {
-                // --- Расчет стоимости стен ---
+     
                 decimal perimeter = (decimal)(2 * (model.Length + model.Width));
                 decimal wallHeight = (decimal)model.Height;
                 decimal wallArea = perimeter * wallHeight;
@@ -68,32 +66,27 @@ namespace DiplomaProject_ITMO.Controllers
                 switch (model.FoundationType)
                 {
                     case "Slab":
-                        // Например, стоимость за квадратный метр плиты
-                        foundationCost = (decimal)(10000 * model.Length * model.Width*500); // Пример: 1000 руб/м2
+                        
+                        foundationCost = (decimal)(10000 * model.Length * model.Width*500); 
                         break;
                     case "Strip":
-                        // Например, стоимость за погонный метр ленты
-                        foundationCost = (decimal)(500 * perimeter); // Пример: 500 руб/м
+                        
+                        foundationCost = (decimal)(500 * perimeter); 
                         break;
                     case "Pile":
-                        // стоимость за сваи
+                       
                         foundationCost = (decimal)(5000 * 20); 
                         break;
                     default:
                         ModelState.AddModelError("", "Неизвестный тип фундамента.");
                         return View("Index", model);
                 }
-
-                //  Расчет дополнительных опций 
-                decimal saunaCost = model.HasSauna ? 50000 : 0; // Пример: 50000 руб за сауну
-                decimal fenceCost = model.HasFence ? 30000 : 0; // Пример: 30000 руб за забор
-                decimal electricityCost = model.NeedsElectricity ? 20000 : 0; // Пример: 20000 руб за электричество
-                decimal waterSupplyCost = model.HasWaterSupply ? 25000 : 0; // Пример: 25000 руб за водопровод
-
-                //  Общий расчет стоимости проекта 
+                decimal saunaCost = model.HasSauna ? 50000 : 0;
+                decimal fenceCost = model.HasFence ? 30000 : 0; 
+                decimal electricityCost = model.NeedsElectricity ? 20000 : 0; 
+                decimal waterSupplyCost = model.HasWaterSupply ? 25000 : 0;
                 decimal totalCost = (decimal)model.LandCost + materialCost + foundationCost +
                                     saunaCost + fenceCost + electricityCost + waterSupplyCost;
-
                 model.TotalCost = totalCost;
                 _context.Projects.Add(model);
 
@@ -106,12 +99,10 @@ namespace DiplomaProject_ITMO.Controllers
                     ModelState.AddModelError("", "Ошибка при сохранении данных: " + ex.Message);
                     return View("Index", model);
                 }
-
                 ViewBag.TotalMaterial = netWallArea;
                 ViewBag.TotalCost = totalCost;
                 return View("Index", model);
             }
-
             return View("Index", model);
         }
     }

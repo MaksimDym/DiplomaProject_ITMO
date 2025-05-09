@@ -1,86 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Главная";
 }
-<style>
-    html, body {
-        height: 100%;
-        margin: 0;
-        overflow: hidden;
-        font-family: 'Playfair Display', serif;
-    }
 
-    .background-container {
-        background-image: url('/images/home.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        color: #000;
-        text-align: center;
-        padding: 20px;
-        z-index: -1;
-        filter: brightness(0,3);
-    }
 
-    .card {
-        background-color: transparent; 
-        color: #FAFAD2;
-        border: none;
-        box-shadow: none;
-        width: 80%;
-        max-width: 800px;
-        margin-top: 50px;
-    }
-
-    .card-body {
-        padding: 20px;
-    }
-
-    .card-title {
-        font-size: 3.0rem; /* Увеличенный размер заголовка */
-        font-weight: bold;
-        margin-bottom: 1.5rem; /* Увеличенный отступ снизу */
-        text-align: center;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .card-text,
-    .list-item,
-    .last-paragraph { /* Добавляем стили для всех элементов */
-        font-size: 1.6rem;
-        margin-bottom: 1.2rem;
-        text-align: left;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    
-    li {
-        margin-bottom: 0.5rem;
-    }
-
-    
-    .last-paragraph {
-        
-    }
-
-    .content {
-        position: relative;
-        z-index: 1;
-    }
-</style>
 <div class="background-container"></div>
 <div class="content">
     <div class="card">
@@ -89,7 +11,7 @@
                 Расчёт строительства индивидуального дома
             </h1>
             <p class="card-text">
-                Это приложение поможет вам рассчитать стоимость материалов для
+                Этот сайт поможет вам рассчитать стоимость материалов для
                 строительства, рассчитать дополнительные услуги и оставить обратную
                 связь. С нами вы сможете спланировать свой проект и получить точную
                 оценку затрат.

@@ -5,7 +5,7 @@
 namespace DiplomaProject_ITMO.Migrations
 {
     /// <inheritdoc />
-    public partial class AddFeedbackModel : Migration
+    public partial class AddProjectModelToDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -31,18 +31,17 @@ namespace DiplomaProject_ITMO.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     LandCost = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    MaterialType = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    MaterialType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MaterialCost = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Length = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Width = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Height = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    FoundationType = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Length = table.Column<double>(type: "float", nullable: false),
+                    Width = table.Column<double>(type: "float", nullable: false),
+                    Height = table.Column<double>(type: "float", nullable: false),
+                    FoundationType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     WindowCount = table.Column<int>(type: "int", nullable: false),
                     HasSauna = table.Column<bool>(type: "bit", nullable: false),
                     HasFence = table.Column<bool>(type: "bit", nullable: false),
-                    HasElectricity = table.Column<bool>(type: "bit", nullable: false),
-                    HasWater = table.Column<bool>(type: "bit", nullable: false),
-                    NeedsWorkers = table.Column<bool>(type: "bit", nullable: false),
+                    NeedsElectricity = table.Column<bool>(type: "bit", nullable: false),
+                    HasWaterSupply = table.Column<bool>(type: "bit", nullable: false),
                     TotalCost = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>

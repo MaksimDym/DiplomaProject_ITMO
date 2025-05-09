@@ -1,4 +1,4 @@
-/* Общие стили для всего документа */
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,55 +7,55 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Стили для заголовков */
+
 h2 {
     text-align: center;
     color: #333;
 }
 
-/* Стили для формы */
+
 form {
     max-width: 600px;
     margin: 20px auto;
-    padding: 15px; /* Уменьшено значение padding */
+    padding: 15px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Стили для групп элементов формы */
+
 .form-group {
-    margin-bottom: 10px; /* Уменьшено значение margin-bottom */
+    margin-bottom: 10px; 
 }
 
-/* Стили для меток формы */
+
 label {
     display: block;
-    margin-bottom: 3px; /* Уменьшено значение margin-bottom */
+    margin-bottom: 3px;
     color: #555;
-    font-size: 0.9rem; /*Немного уменьшим размер шрифта меток*/
+    font-size: 0.9rem; 
 }
 
-/* Стили для полей ввода и текстовых областей */
+
 input[type="number"],
 select {
     width: 100%;
-    padding: 8px; /* Уменьшено значение padding */
+    padding: 8px; 
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px; /* Уменьшен размер шрифта */
+    font-size: 14px; 
 }
 
-/* Стили для кнопок отправки */
+
 button {
     display: block;
     width: 100%;
-    padding: 8px; /* Уменьшено значение padding */
-    background-color: orange;
+    padding: 8px;
+    background-color: #D2691E;
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 14px; /* Уменьшен размер шрифта */
+    font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -64,29 +64,28 @@ button {
         background-color: darkorange;
     }
 
-/* Стили для успешного сообщения после отправки формы */
+
 .success-message {
     text-align: center;
     color: #28a745;
-    margin-top: 15px; /* Уменьшено значение margin-top */
+    margin-top: 15px;
 }
 
-/* Увеличиваем отступы между элементами навигации */
+
 .nav-item {
     margin-right: 40px;
 }
 
-    /* Убираем отступ у последнего элемента навигации */
+   
     .nav-item:last-child {
         margin-right: 0;
     }
 
-/* Добавляем отступ слева */
 .left-margin {
     margin-left: 20px;
 }
 
-/* Уменьшаем отступы в подвале */
+
 .footer {
     padding: 2px;
 }
@@ -105,34 +104,314 @@ nav ul {
     }
 
 .my-dark-footer {
-    background-color: #343a40; /* Другой оттенок темно-серого */
-    color: #eee; /* Немного более мягкий белый цвет текста */
+    background-color: #343a40; 
+    color: #eee; 
+    font-size: 1.1rem;
 }
 
     .my-dark-footer a {
-        color: #eee; /* Тот же цвет для ссылки */
+        color: #eee; 
     }
 body {
-    font-family: 'Arial', sans-serif; /* Более симпатичный шрифт по умолчанию */
-    font-size: 16px; /* Увеличенный размер шрифта */
+    font-family: 'Arial', sans-serif;
+    font-size: 16px; 
 }
 
-/* Стили для навигации (header) */
+
 .navbar {
-    font-size: 1.2rem; /* Увеличивает размер шрифта в навигации */
+    font-size: 1.2rem; 
 }
 
-/* Стили для подвала (footer) */
-.my-dark-footer {
-    font-size: 1.1rem; /* Увеличивает размер шрифта в подвале */
+html,
+body {
+    height: auto;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-.body-content {
-    font-size: 1.1rem; /*увеличивает шрифт body*/
+
+#feedback-page-content .background-container {
+    background-image: url('/images/home1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(1.2);
 }
 
-/* Дополнительные стили для ссылок (чтобы они тоже были больше) */
-.nav-link,
-.my-dark-footer a {
-    font-weight: bold; /* Делает шрифт жирнее */
+#feedback-page-content .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#feedback-page-content .card {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+#feedback-page-content .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#feedback-page-content .card-text { 
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+
+#feedback-page-content .feedback-form .form-group {
+    margin-bottom: 1rem;
+}
+
+#feedback-page-content .feedback-form label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#feedback-page-content .feedback-form input[type="email"],
+#feedback-page-content .feedback-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem; 
+    font-family: 'Roboto', sans-serif;
+}
+
+#feedback-page-content .feedback-form textarea {
+    resize: vertical;
+}
+
+#feedback-page-content .feedback-form .submit-button {
+    background-color: orange;
+    border-color: orange;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 1rem;
+    border: none;
+}
+
+    #feedback-page-content .feedback-form .submit-button:hover {
+        background-color: #cc7a00;
+    }
+
+
+#feedback-page-content .success-message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+}
+
+.background-container {
+    background-image: url('/images/home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    z-index: -1;
+    filter: brightness(0,3);
+}
+
+.card {
+    background-color: transparent;
+    color: #FAFAD2;
+    border: none;
+    box-shadow: none;
+    width: 80%;
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 3.0rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem; 
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card-text,
+.list-item,
+.last-paragraph {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+
+.last-paragraph {
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.background-container {
+    background-image: url('/images/home2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(1.2);
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.text-danger {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+#page2.form-check {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-check-input {
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    background-color: olive;
+    border-color: olive;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 1rem;
+}
+
+    .btn-primary:hover {
+        background-color: #cc7a00;
+        border-color: #cc7a00;
+    }
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
 }

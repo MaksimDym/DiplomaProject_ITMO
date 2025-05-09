@@ -5,7 +5,7 @@
 namespace DiplomaProject_ITMO.Migrations
 {
     /// <inheritdoc />
-    public partial class AddProjectkModel : Migration
+    public partial class AddFeedbackModelToDatabase : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -39,7 +39,7 @@ namespace DiplomaProject_ITMO.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Feedbacks", (string)null);
+                    b.ToTable("Feedbacks");
                 });
 
             modelBuilder.Entity("DiplomaProject_ITMO.Models.ProjectModel", b =>
@@ -52,11 +52,7 @@ namespace DiplomaProject_ITMO.Migrations
 
                     b.Property<string>("FoundationType")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<bool>("HasElectricity")
-                        .HasColumnType("bit");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("HasFence")
                         .HasColumnType("bit");
@@ -64,41 +60,40 @@ namespace DiplomaProject_ITMO.Migrations
                     b.Property<bool>("HasSauna")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("HasWater")
+                    b.Property<bool>("HasWaterSupply")
                         .HasColumnType("bit");
 
-                    b.Property<decimal>("Height")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Height")
+                        .HasColumnType("float");
 
                     b.Property<decimal>("LandCost")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Length")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Length")
+                        .HasColumnType("float");
 
                     b.Property<decimal>("MaterialCost")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("MaterialType")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("NeedsWorkers")
+                    b.Property<bool>("NeedsElectricity")
                         .HasColumnType("bit");
 
                     b.Property<decimal>("TotalCost")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<decimal>("Width")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<double>("Width")
+                        .HasColumnType("float");
 
                     b.Property<int>("WindowCount")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Projects", (string)null);
+                    b.ToTable("Projects");
                 });
 #pragma warning restore 612, 618
         }
