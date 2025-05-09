@@ -21,13 +21,11 @@ namespace DiplomaProject_ITMO.Controllers
         {
             if (ModelState.IsValid)
             {
-     
                 decimal perimeter = (decimal)(2 * (model.Length + model.Width));
                 decimal wallHeight = (decimal)model.Height;
                 decimal wallArea = perimeter * wallHeight;
                 decimal windowArea = (decimal)(model.WindowCount * 1.4 * 1.4);
                 decimal netWallArea = wallArea - windowArea;
-
                 decimal materialCost = 0;
                 switch (model.MaterialType)
                 {
@@ -60,8 +58,6 @@ namespace DiplomaProject_ITMO.Controllers
                         ModelState.AddModelError("", "Неизвестный тип материала.");
                         return View("Index", model);
                 }
-
-                
                 decimal foundationCost = 0;
                 switch (model.FoundationType)
                 {
