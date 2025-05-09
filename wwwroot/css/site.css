@@ -90,3 +90,16 @@ button {
 .footer {
     padding: 2px;
 }
+nav ul {
+    display: grid; /* Включаем Grid Layout */
+    grid-template-columns: repeat(3, auto); /* Создаем 3 колонки с автоматической шириной */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: center; /* Центрируем элементы по вертикали (если необходимо) */
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы списка */
+    margin: 0; /* Убираем отступы списка */
+}
+
+    nav ul li {
+        /*  Можно добавить дополнительные стили для элементов списка */
+    }

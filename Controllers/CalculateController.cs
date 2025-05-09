@@ -27,7 +27,7 @@ namespace DiplomaProject_ITMO.Controllers
                 decimal wallVolume = (decimal)(model.Length * model.Width * model.Height);
 
                 // 2. Расчет площади окон (учитываем вычет)
-                decimal windowArea = (decimal)(model.WindowCount * 1.5 * 1.5);
+                decimal windowArea = (decimal)(model.WindowCount * 1.4 * 1.4);
                 decimal totalMaterialVolume = wallVolume - windowArea; // Общий объем материала с вычетом окон
 
                 // 3. Расчет стоимости материалов в зависимости от типа материала
@@ -40,10 +40,8 @@ namespace DiplomaProject_ITMO.Controllers
                         break;
                     case "Brick":
                     case "GasBlock":
-                        // Для кирпича и газоблока стоимость указывается за штуку.  Нужно приблизительно рассчитать кол-во штук.
-                        // Это упрощенный пример, реальный расчет будет сложнее и зависеть от размеров кирпича/газоблока.
+                        
 
-                        // Пример:  Предположим, что 1 м³ = 400 кирпичей/газоблоков (это нужно уточнить!).
                         decimal materialCount = totalMaterialVolume * 400;
                         materialCost = (decimal)(model.MaterialCost * materialCount);
                         break;
@@ -72,7 +70,7 @@ namespace DiplomaProject_ITMO.Controllers
 
                 // 6. Передача данных в представление
                 ViewBag.TotalMaterial = totalMaterialVolume;
-                ViewBag.TotalCost = totalCost; // Передача общей стоимости в представление
+                ViewBag.TotalCost = totalCost; 
                 return View("Index", model);
             }
 

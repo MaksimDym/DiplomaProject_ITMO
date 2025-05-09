@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home.jpg",
+      "PackagePath": "staticwebassets\\images\\home.jpg"
+    },
+    {
+      "Id": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home1.jpg",
+      "PackagePath": "staticwebassets\\images\\home1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home2.jpg",
+      "PackagePath": "staticwebassets\\images\\home2.jpg"
+    },
+    {
       "Id": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

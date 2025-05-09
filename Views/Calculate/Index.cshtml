@@ -1,115 +1,240 @@
 ﻿@model DiplomaProject_ITMO.Models.ProjectModel
 
 @{
-    ViewData["Title"] = "Расчёт материалов для строительства";
+    ViewData["Title"] = "Расчет материалов";
 }
 
-<h2>Расчёт материалов для строительства</h2>
+<style>
+    html, body {
+        height: auto;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
 
-<form method="post" asp-controller="Calculate" asp-action="Calculate">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    .background-container {
+        background-image: url('/images/home.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        filter: brightness(1.2);
+    }
 
-    <div class="form-group">
-        <label asp-for="LandCost"></label>
-        <input asp-for="LandCost" class="form-control" />
-        <span asp-validation-for="LandCost" class="text-danger"></span>
-    </div>
+    .content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
 
-    <div class="form-group">
-        <label asp-for="MaterialType"></label>
-        <select asp-for="MaterialType" class="form-control">
-            <option value="Wood">Дерево</option>
-            <option value="Brick">Кирпич</option>
-            <option value="GasBlock">Газоблок</option>
-        </select>
-        <span asp-validation-for="MaterialType" class="text-danger"></span>
-    </div>
+    .card {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #333;
+        border: none;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        max-width: 800px;
+        padding: 20px;
+    }
 
-    <div class="form-group">
-        <label asp-for="MaterialCost"><span id="materialCostLabel">Стоимость материала (1м³):</span></label>
-        <input asp-for="MaterialCost" class="form-control" />
-        <span asp-validation-for="MaterialCost" class="text-danger"></span>
-    </div>
+    .card-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
 
-    <div class="form-group">
-        <label asp-for="Length"></label>
-        <input asp-for="Length" class="form-control" />
-        <span asp-validation-for="Length" class="text-danger"></span>
-    </div>
+    .card-text {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
 
-    <div class="form-group">
-        <label asp-for="Width"></label>
-        <input asp-for="Width" class="form-control" />
-        <span asp-validation-for="Width" class="text-danger"></span>
-    </div>
+    .form-group {
+        margin-bottom: 1rem;
+    }
 
-    <div class="form-group">
-        <label asp-for="Height"></label>
-        <input asp-for="Height" class="form-control" />
-        <span asp-validation-for="Height" class="text-danger"></span>
-    </div>
+    label {
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
 
-    <div class="form-group">
-        <label asp-for="FoundationType"></label>
-        <select asp-for="FoundationType" class="form-control">
-            <option value="Pile">Свайный</option>
-            <option value="Strip">Ленточный</option>
-            <option value="Plate">Плитный</option>
-        </select>
-        <span asp-validation-for="FoundationType" class="text-danger"></span>
-    </div>
+    input,
+    select {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
 
-    <div class="form-group">
-        <label asp-for="WindowCount"></label>
-        <input asp-for="WindowCount" class="form-control" />
-        <span asp-validation-for="WindowCount" class="text-danger"></span>
-    </div>
+    .text-danger {
+        color: red;
+        font-size: 0.9rem;
+        margin-top: 0.25rem;
+    }
 
-    <hr />
-    <h3>Дополнительные расчеты:</h3>
+    .form-check {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
 
-    <div class="form-group">
-        <div class="form-check">
-            <input asp-for="HasSauna" class="form-check-input" />
-            <label class="form-check-label" asp-for="HasSauna">Сауна на участке</label>
+    .form-check-input {
+        margin-right: 0.5rem;
+    }
+
+    .btn-primary {
+        background-color: orange;
+        border-color: orange;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        margin-top: 1rem;
+    }
+
+        .btn-primary:hover {
+            background-color: #cc7a00;
+            border-color: #cc7a00;
+        }
+
+    h3 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+</style> 
+<div class="background-container"></div>
+<div class="content">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title">Расчет материалов</h1>
+            <form method="post" asp-controller="Calculate" asp-action="Calculate">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="LandCost">Стоимость земли:</label>
+                    <input asp-for="LandCost" class="form-control" />
+                    <span asp-validation-for="LandCost" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MaterialType">Тип материала:</label>
+                    <select asp-for="MaterialType" class="form-control" id="materialType">
+                        <option value="Wood">Дерево</option>
+                        <option value="Brick">Кирпич</option>
+                        <option value="GasBlock">Газоблок</option>
+                    </select>
+                    <span asp-validation-for="MaterialType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="MaterialCost"><span id="materialCostLabel">Стоимость материала (1м³):</span></label>
+                    <input asp-for="MaterialCost" class="form-control" />
+                    <span asp-validation-for="MaterialCost" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Length">Длина (м):</label>
+                    <input asp-for="Length" class="form-control" />
+                    <span asp-validation-for="Length" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Width">Ширина (м):</label>
+                    <input asp-for="Width" class="form-control" />
+                    <span asp-validation-for="Width" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Height">Высота (м):</label>
+                    <input asp-for="Height" class="form-control" />
+                    <span asp-validation-for="Height" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FoundationType">Тип фундамента:</label>
+                    <select asp-for="FoundationType" class="form-control" id="foundationType">
+                        <option value="Pile">Свайный</option>
+                        <option value="Strip">Ленточный</option>
+                        <option value="Plate">Плитный</option>
+                    </select>
+                    <span asp-validation-for="FoundationType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="WindowCount">Количество окон:</label>
+                    <input asp-for="WindowCount" class="form-control" />
+                    <span asp-validation-for="WindowCount" class="text-danger"></span>
+                </div>
+
+                <h3>Дополнительные работы:</h3>
+
+                <div class="form-group form-check">
+                    <input asp-for="HasSauna" class="form-check-input" />
+                    <label class="form-check-label" asp-for="HasSauna">Сауна</label>
+                </div>
+
+                <div class="form-group form-check">
+                    <input asp-for="HasFence" class="form-check-input" />
+                    <label class="form-check-label" asp-for="HasFence">Забор</label>
+                </div>
+                <div class="form-group form-check">
+                    <input asp-for="NeedsElectricity" class="form-check-input" />
+                    <label class="form-check-label" asp-for="NeedsElectricity">Подвод электричества</label>
+                </div>
+
+                <div class="form-group form-check">
+                    <input asp-for="HasWaterSupply" class="form-check-input" />
+                    <label class="form-check-label" asp-for="HasWaterSupply">Подвод водопровода</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Рассчитать</button>
+            </form>
+
+            @if (ViewData.ModelState.IsValid && ViewBag.TotalMaterial != null && ViewBag.TotalCost != null)
+            {
+                <h3>Общее количество материала: @ViewBag.TotalMaterial м³</h3>
+                <h3>Общая стоимость проекта: @ViewBag.TotalCost руб.</h3>
+            }
         </div>
     </div>
-
-    <div class="form-group">
-        <div class="form-check">
-            <input asp-for="HasFence" class="form-check-input" />
-            <label class="form-check-label" asp-for="HasFence">Забор на участке</label>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="form-check">
-            <input asp-for="NeedsElectricity" class="form-check-input" />
-            <label class="form-check-label" asp-for="NeedsElectricity">Подвод электричества</label>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="form-check">
-            <input asp-for="HasWaterSupply" class="form-check-input" />
-            <label class="form-check-label" asp-for="HasWaterSupply">Подвод водопровода</label>
-        </div>
-    </div>
-
-    <button type="submit" style="background-color: orange;" class="btn btn-primary">Рассчитать</button>
-</form>
-
-@if (ViewData.ModelState.IsValid && ViewBag.TotalMaterial != null && ViewBag.TotalCost != null)
-{
-    <h3>Общее количество материала: @ViewBag.TotalMaterial м³</h3>
-    <h3>Общая стоимость проекта: @ViewBag.TotalCost рублей</h3>
-}
+</div>
 
 @section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
     <script>
         $(document).ready(function () {
+            var $materialType = $('#materialType');
+            var $foundationType = $('#foundationType');
+            var $pileOption = $foundationType.find('option[value="Pile"]');
+
             function updateMaterialCostLabel() {
-                var selectedMaterial = $('#materialType').val();
+                var selectedMaterial = $materialType.val();
                 var labelText = "";
 
                 if (selectedMaterial === "Wood") {
@@ -120,10 +245,25 @@
                 $('#materialCostLabel').text(labelText);
             }
 
-            updateMaterialCostLabel();
+            function updateFoundationOptions() {
+                var selectedMaterial = $materialType.val();
 
-            $('#materialType').change(function () {
+                if (selectedMaterial === "Brick" || selectedMaterial === "GasBlock") {
+                    $pileOption.prop('disabled', true);
+                    if ($foundationType.val() === "Pile") {
+                        $foundationType.val("Strip"); // Set default value to Strip or other valid option
+                    }
+                } else {
+                    $pileOption.prop('disabled', false);
+                }
+            }
+
+            updateMaterialCostLabel();
+            updateFoundationOptions();
+
+            $materialType.change(function () {
                 updateMaterialCostLabel();
+                updateFoundationOptions();
             });
         });
     </script>

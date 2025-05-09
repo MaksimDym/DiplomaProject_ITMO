@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hrfZcKC63yU3QJW2p95q8GSbtnQvK5EgIKNaSAPA4Kw=",
+  "Hash": "Cx/DQA59p8IZM5r5CixE/wOCq/jkRG0vvudFSX2ZAXk=",
   "Source": "DiplomaProject_ITMO",
   "BasePath": "_content/DiplomaProject_ITMO",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "l8woh71lpq",
-      "Integrity": "NTa7ychA7B1NuoDVFb4F3nVluQpMKLvYUIv8deDLuuE=",
+      "Fingerprint": "ehxfjh3cth",
+      "Integrity": "Ql7QUbfOAcU9B7XBgdqI5xFuVM+JkuEIBeQoKFxX7Qw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -99,6 +99,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home.jpg",
+      "SourceId": "DiplomaProject_ITMO",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\",
+      "BasePath": "_content/DiplomaProject_ITMO",
+      "RelativePath": "images/home#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "kj6he8xdb6",
+      "Integrity": "oIY6UHz870WGsmBRzGgSWWDCUqoj1KJXTJsMriQpu1U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home1.jpg",
+      "SourceId": "DiplomaProject_ITMO",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\",
+      "BasePath": "_content/DiplomaProject_ITMO",
+      "RelativePath": "images/home1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uppxlmo170",
+      "Integrity": "jvKk43BmHBWmTzvgGzrhRaqpDPSWe1lBPAQ/U+o4lg4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home1.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home2.jpg",
+      "SourceId": "DiplomaProject_ITMO",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\",
+      "BasePath": "_content/DiplomaProject_ITMO",
+      "RelativePath": "images/home2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ak0wwv2t6v",
+      "Integrity": "JtndaF+B2wqkx1KKRh4MlvDjHr57+MLDpKx1NpUuDog=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\home2.jpg"
     },
     {
       "Identity": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\js\\site.js",
@@ -1331,7 +1394,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2063"
+          "Value": "2611"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1402,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NTa7ychA7B1NuoDVFb4F3nVluQpMKLvYUIv8deDLuuE=\""
+          "Value": "\"Ql7QUbfOAcU9B7XBgdqI5xFuVM+JkuEIBeQoKFxX7Qw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 17:19:03 GMT"
+          "Value": "Fri, 09 May 2025 12:08:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,12 +1416,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NTa7ychA7B1NuoDVFb4F3nVluQpMKLvYUIv8deDLuuE="
+          "Value": "sha256-Ql7QUbfOAcU9B7XBgdqI5xFuVM+JkuEIBeQoKFxX7Qw="
         }
       ]
     },
     {
-      "Route": "css/site.l8woh71lpq.css",
+      "Route": "css/site.ehxfjh3cth.css",
       "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1368,7 +1431,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2063"
+          "Value": "2611"
         },
         {
           "Name": "Content-Type",
@@ -1376,11 +1439,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NTa7ychA7B1NuoDVFb4F3nVluQpMKLvYUIv8deDLuuE=\""
+          "Value": "\"Ql7QUbfOAcU9B7XBgdqI5xFuVM+JkuEIBeQoKFxX7Qw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 17:19:03 GMT"
+          "Value": "Fri, 09 May 2025 12:08:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1390,7 +1453,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "l8woh71lpq"
+          "Value": "ehxfjh3cth"
         },
         {
           "Name": "label",
@@ -1398,7 +1461,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-NTa7ychA7B1NuoDVFb4F3nVluQpMKLvYUIv8deDLuuE="
+          "Value": "sha256-Ql7QUbfOAcU9B7XBgdqI5xFuVM+JkuEIBeQoKFxX7Qw="
         }
       ]
     },
@@ -1425,7 +1488,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 16:28:21 GMT"
+          "Value": "Fri, 09 May 2025 12:14:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1470,7 +1533,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 16:28:21 GMT"
+          "Value": "Fri, 09 May 2025 12:14:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1515,7 +1578,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 16:28:21 GMT"
+          "Value": "Fri, 09 May 2025 12:14:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1552,7 +1615,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 May 2025 16:28:21 GMT"
+          "Value": "Fri, 09 May 2025 12:14:56 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1645,6 +1708,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/home.jpg",
+      "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46665"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oIY6UHz870WGsmBRzGgSWWDCUqoj1KJXTJsMriQpu1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 12:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oIY6UHz870WGsmBRzGgSWWDCUqoj1KJXTJsMriQpu1U="
+        }
+      ]
+    },
+    {
+      "Route": "images/home.kj6he8xdb6.jpg",
+      "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "46665"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oIY6UHz870WGsmBRzGgSWWDCUqoj1KJXTJsMriQpu1U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 12:51:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "kj6he8xdb6"
+        },
+        {
+          "Name": "label",
+          "Value": "images/home.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oIY6UHz870WGsmBRzGgSWWDCUqoj1KJXTJsMriQpu1U="
+        }
+      ]
+    },
+    {
+      "Route": "images/home1.jpg",
+      "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "45762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jvKk43BmHBWmTzvgGzrhRaqpDPSWe1lBPAQ/U+o4lg4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 12:51:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jvKk43BmHBWmTzvgGzrhRaqpDPSWe1lBPAQ/U+o4lg4="
+        }
+      ]
+    },
+    {
+      "Route": "images/home1.uppxlmo170.jpg",
+      "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "45762"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jvKk43BmHBWmTzvgGzrhRaqpDPSWe1lBPAQ/U+o4lg4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 12:51:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uppxlmo170"
+        },
+        {
+          "Name": "label",
+          "Value": "images/home1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jvKk43BmHBWmTzvgGzrhRaqpDPSWe1lBPAQ/U+o4lg4="
+        }
+      ]
+    },
+    {
+      "Route": "images/home2.ak0wwv2t6v.jpg",
+      "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51470"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JtndaF+B2wqkx1KKRh4MlvDjHr57+MLDpKx1NpUuDog=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 12:52:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ak0wwv2t6v"
+        },
+        {
+          "Name": "label",
+          "Value": "images/home2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JtndaF+B2wqkx1KKRh4MlvDjHr57+MLDpKx1NpUuDog="
+        }
+      ]
+    },
+    {
+      "Route": "images/home2.jpg",
+      "AssetFile": "C:\\Users\\fanma\\source\\repos\\DiplomaProject_ITMO\\wwwroot\\images\\home2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51470"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JtndaF+B2wqkx1KKRh4MlvDjHr57+MLDpKx1NpUuDog=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 09 May 2025 12:52:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JtndaF+B2wqkx1KKRh4MlvDjHr57+MLDpKx1NpUuDog="
         }
       ]
     },
