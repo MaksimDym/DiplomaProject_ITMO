@@ -1,5 +1,7 @@
 ﻿using DiplomaProject_ITMO.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Tasks;
 
 namespace DiplomaProject_ITMO.Controllers
 {
@@ -15,23 +17,25 @@ namespace DiplomaProject_ITMO.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View(new FeedbackModel()); // передаем пустую модель
         }
 
         [HttpPost]
-        public IActionResult Submit(FeedbackModel feedback)
+        public async Task<IActionResult> Submit(FeedbackModel feedback)
         {
             if (ModelState.IsValid)
             {
                 _context.Feedbacks.Add(feedback);
-                _context.SaveChanges();
-                return RedirectToAction("Ваше сообщение отправлено");
+                await _context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Ваше сообщение успешно отправлено!";
+                return RedirectToAction("ThankYou");
             }
             return View("Index", feedback);
         }
 
         public IActionResult ThankYou()
         {
+            ViewData["SuccessMessage"] = TempData["SuccessMessage"];
             return View();
         }
     }

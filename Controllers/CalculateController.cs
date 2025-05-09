@@ -77,10 +77,10 @@ namespace DiplomaProject_ITMO.Controllers
                         ModelState.AddModelError("", "Неизвестный тип фундамента.");
                         return View("Index", model);
                 }
-                decimal saunaCost = model.HasSauna ? 50000 : 0;
+                decimal saunaCost = model.HasSauna ? 150000 : 0;
                 decimal fenceCost = model.HasFence ? 30000 : 0; 
-                decimal electricityCost = model.NeedsElectricity ? 20000 : 0; 
-                decimal waterSupplyCost = model.HasWaterSupply ? 25000 : 0;
+                decimal electricityCost = model.NeedsElectricity ? 100000 : 0; 
+                decimal waterSupplyCost = model.HasWaterSupply ? 100000 : 0;
                 decimal totalCost = (decimal)model.LandCost + materialCost + foundationCost +
                                     saunaCost + fenceCost + electricityCost + waterSupplyCost;
                 model.TotalCost = totalCost;
