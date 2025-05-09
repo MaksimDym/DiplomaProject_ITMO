@@ -44,10 +44,10 @@ namespace DiplomaProject_ITMO.Models
         [Display(Name = "Количество окон")]
         public int WindowCount { get; set; }
 
-        [Display(Name = "Сауна на участке")]
+        [Display(Name = "Сауна ")]
         public bool HasSauna { get; set; }
 
-        [Display(Name = "Забор на участке")]
+        [Display(Name = "Забор")]
         public bool HasFence { get; set; }
 
         [Display(Name = "Подвод электричества")]

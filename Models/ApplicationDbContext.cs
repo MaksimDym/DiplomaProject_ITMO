@@ -14,7 +14,7 @@ namespace DiplomaProject_ITMO.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<FeedbackModel>()
-                .HasKey(f => f.Id); // Указываем, что Id является первичным ключом
+                .HasKey(f => f.Id); 
 
            
         }

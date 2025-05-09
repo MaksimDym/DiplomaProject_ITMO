@@ -6,7 +6,7 @@
         height: 100%;
         margin: 0;
         overflow: hidden;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Playfair Display', serif;
     }
 
     .background-container {
@@ -27,12 +27,12 @@
         text-align: center;
         padding: 20px;
         z-index: -1;
-        filter: brightness(1.2);
+        filter: brightness(0,3);
     }
 
     .card {
-        background-color: rgba(255, 255, 255, 0.6); /* Полупрозрачный белый фон */
-        color: #000;
+        background-color: transparent; 
+        color: #FAFAD2;
         border: none;
         box-shadow: none;
         width: 80%;
@@ -45,26 +45,35 @@
     }
 
     .card-title {
-        font-size: 3rem;
+        font-size: 3.0rem; /* Увеличенный размер заголовка */
         font-weight: bold;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        margin-bottom: 1.5rem; /* Увеличенный отступ снизу */
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    .card-text {
-        font-size: 1.4rem;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    .card-text,
+    .list-item,
+    .last-paragraph { /* Добавляем стили для всех элементов */
+        font-size: 1.6rem;
         margin-bottom: 1.2rem;
+        text-align: left;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     ul {
         list-style-type: none;
-        padding: 0;
+        padding-left: 0;
     }
 
+    
     li {
-        font-size: 1.2rem;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    
+    .last-paragraph {
+        
     }
 
     .content {
@@ -76,15 +85,27 @@
 <div class="content">
     <div class="card">
         <div class="card-body">
-            <h1 class="card-title text-center">Добро пожаловать на сайт расчёта строительства индивидуального дома</h1>
-            <p class="card-text">Это приложение поможет вам рассчитать стоимость материалов для строительства, оценить дополнительные услуги и оставить обратную связь. С нами вы сможете спланировать свой проект и получить точную оценку затрат.</p>
+            <h1 class="card-title text-center">
+                Расчёт строительства индивидуального дома
+            </h1>
+            <p class="card-text">
+                Это приложение поможет вам рассчитать стоимость материалов для
+                строительства, рассчитать дополнительные услуги и оставить обратную
+                связь. С нами вы сможете спланировать свой проект и получить точную
+                оценку затрат.
+            </p>
             <p class="card-text">Мы предлагаем:</p>
             <ul>
-                <li>Точные расчеты стоимости материалов.</li>
-                <li>Оценку дополнительных услуг (сауна, забор, электричество, водопровод).</li>
-                <li>Возможность оставить отзыв и предложения.</li>
+                <li class="list-item">Точные расчеты стоимости материалов.</li>
+                <li class="list-item">
+                    Оценку дополнительных услуг (сауна, забор, электричество,
+                    водопровод).
+                </li>
+                <li class="list-item">Возможность оставить отзыв и предложения.</li>
             </ul>
-            <p class="card-text">Начните планировать свой дом мечты сегодня!</p>
+            <p class="card-text last-paragraph">
+                Начните планировать свой дом мечты сегодня!
+            </p>
         </div>
     </div>
 </div>

@@ -23,54 +23,92 @@ namespace DiplomaProject_ITMO.Controllers
         {
             if (ModelState.IsValid)
             {
-                // 1. Расчет объема стен
-                decimal wallVolume = (decimal)(model.Length * model.Width * model.Height);
-
-                // 2. Расчет площади окон (учитываем вычет)
+                // --- Расчет стоимости стен ---
+                decimal perimeter = (decimal)(2 * (model.Length + model.Width));
+                decimal wallHeight = (decimal)model.Height;
+                decimal wallArea = perimeter * wallHeight;
                 decimal windowArea = (decimal)(model.WindowCount * 1.4 * 1.4);
-                decimal totalMaterialVolume = wallVolume - windowArea; // Общий объем материала с вычетом окон
+                decimal netWallArea = wallArea - windowArea;
 
-                // 3. Расчет стоимости материалов в зависимости от типа материала
                 decimal materialCost = 0;
                 switch (model.MaterialType)
                 {
                     case "Wood":
-                        // Для дерева стоимость указывается за м³
-                        materialCost = (decimal)(model.MaterialCost * totalMaterialVolume);
+                        decimal woodVolume = netWallArea * 0.2M;
+                        materialCost = (decimal)(model.MaterialCost * woodVolume);
                         break;
-                    case "Brick":
-                    case "GasBlock":
-                        
 
-                        decimal materialCount = totalMaterialVolume * 400;
-                        materialCost = (decimal)(model.MaterialCost * materialCount);
+                    case "GasBlock":
+                        decimal gasBlockWidth = 0.1M;
+                        decimal gasBlockHeight = 0.25M;
+                        decimal gasBlockLength = 0.625M;
+                        decimal gasBlockArea = gasBlockLength * gasBlockHeight;
+                        decimal gasBlockPerSquareMeter = 1 / gasBlockArea;
+                        decimal gasBlockCount = netWallArea * gasBlockPerSquareMeter;
+                        materialCost = (decimal)(model.MaterialCost * gasBlockCount);
                         break;
+
+                    case "Brick":
+                        decimal brickLength = 0.25M;
+                        decimal brickWidth = 0.12M * 2;
+                        decimal brickHeight = 0.065M;
+                        decimal brickArea = brickLength * brickHeight;
+                        decimal brickPerSquareMeter = 1 / brickArea;
+                        decimal brickCount = netWallArea * brickPerSquareMeter;
+                        materialCost = (decimal)(model.MaterialCost * brickCount);
+                        break;
+
                     default:
                         ModelState.AddModelError("", "Неизвестный тип материала.");
-                        return View("Index", model);  // Возвращаем представление с ошибкой
+                        return View("Index", model);
                 }
 
-                // 4. Расчет общей стоимости проекта
-                decimal totalCost = (decimal)model.LandCost + materialCost;  // Учитываем стоимость участка и материалов
+                
+                decimal foundationCost = 0;
+                switch (model.FoundationType)
+                {
+                    case "Slab":
+                        // Например, стоимость за квадратный метр плиты
+                        foundationCost = (decimal)(10000 * model.Length * model.Width*500); // Пример: 1000 руб/м2
+                        break;
+                    case "Strip":
+                        // Например, стоимость за погонный метр ленты
+                        foundationCost = (decimal)(500 * perimeter); // Пример: 500 руб/м
+                        break;
+                    case "Pile":
+                        // стоимость за сваи
+                        foundationCost = (decimal)(5000 * 20); 
+                        break;
+                    default:
+                        ModelState.AddModelError("", "Неизвестный тип фундамента.");
+                        return View("Index", model);
+                }
 
-                // 5. Сохранение модели в базе данных
-                model.TotalCost = totalCost; // Установка общей стоимости в модель
+                //  Расчет дополнительных опций 
+                decimal saunaCost = model.HasSauna ? 50000 : 0; // Пример: 50000 руб за сауну
+                decimal fenceCost = model.HasFence ? 30000 : 0; // Пример: 30000 руб за забор
+                decimal electricityCost = model.NeedsElectricity ? 20000 : 0; // Пример: 20000 руб за электричество
+                decimal waterSupplyCost = model.HasWaterSupply ? 25000 : 0; // Пример: 25000 руб за водопровод
+
+                //  Общий расчет стоимости проекта 
+                decimal totalCost = (decimal)model.LandCost + materialCost + foundationCost +
+                                    saunaCost + fenceCost + electricityCost + waterSupplyCost;
+
+                model.TotalCost = totalCost;
                 _context.Projects.Add(model);
 
                 try
                 {
-                    _context.SaveChanges(); // Используем правильный контекст
+                    _context.SaveChanges();
                 }
                 catch (Exception ex)
                 {
-                    // Обработка ошибки (например, логирование)
                     ModelState.AddModelError("", "Ошибка при сохранении данных: " + ex.Message);
                     return View("Index", model);
                 }
 
-                // 6. Передача данных в представление
-                ViewBag.TotalMaterial = totalMaterialVolume;
-                ViewBag.TotalCost = totalCost; 
+                ViewBag.TotalMaterial = netWallArea;
+                ViewBag.TotalCost = totalCost;
                 return View("Index", model);
             }
 
