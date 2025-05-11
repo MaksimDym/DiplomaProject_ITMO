@@ -9,14 +9,29 @@ namespace DiplomaProject_ITMO.Models
         }
 
         public DbSet<ProjectModel> Projects { get; set; }
-        public DbSet<FeedbackModel> Feedbacks { get; set; } 
+        public DbSet<FeedbackModel> Feedbacks { get; set; }
+
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<FeedbackModel>()
-                .HasKey(f => f.Id); 
+                .HasKey(f => f.Id);
 
-          
+            modelBuilder.Entity<User>()
+           .HasIndex(u => u.Username)
+           .IsUnique();
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+
+
         }
+
+
+
     }
+
+
 }

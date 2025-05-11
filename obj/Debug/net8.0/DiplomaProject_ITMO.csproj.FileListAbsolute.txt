@@ -171,3 +171,7 @@ C:\Users\fanma\source\repos\DiplomaProject_ITMO\bin\Debug\net8.0\zh-Hans\Microso
 C:\Users\fanma\source\repos\DiplomaProject_ITMO\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\fanma\source\repos\DiplomaProject_ITMO\obj\Debug\net8.0\DiplomaProject_ITMO.sourcelink.json
 C:\Users\fanma\source\repos\DiplomaProject_ITMO\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\fanma\source\repos\DiplomaProject_ITMO\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\fanma\source\repos\DiplomaProject_ITMO\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\fanma\source\repos\DiplomaProject_ITMO\bin\Debug\net8.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\fanma\source\repos\DiplomaProject_ITMO\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll

@@ -14,10 +14,10 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiplomaProject_ITMO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+564ede548535a94e90e216b2a1ed90ad59844fc0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a227b3f1c9023d9316c81eab0574f73a0944d04")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiplomaProject_ITMO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiplomaProject_ITMO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
-// Создано классом WriteCodeFragment MSBuild.
+
 

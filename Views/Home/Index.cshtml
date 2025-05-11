@@ -2,6 +2,7 @@
     ViewData["Title"] = "Главная";
 }
 
+@using Microsoft.AspNetCore.Http  // Добавьте это для работы с Session
 
 <div class="background-container"></div>
 <div class="content">
@@ -28,6 +29,18 @@
             <p class="card-text last-paragraph">
                 Начните планировать свой дом мечты сегодня!
             </p>
+
+            @if (Context.Session.GetString("username") == null)
+            {
+                
+                <a asp-action="Login" asp-controller="Account" class="btn btn-primary">Авторизация</a>
+            }
+            else
+            {
+                
+                <p>Добро пожаловать, @Context.Session.GetString("username")!</p>
+                <a asp-action="Logout" asp-controller="Account" class="btn btn-secondary">Выход</a>
+            }
         </div>
     </div>
 </div>

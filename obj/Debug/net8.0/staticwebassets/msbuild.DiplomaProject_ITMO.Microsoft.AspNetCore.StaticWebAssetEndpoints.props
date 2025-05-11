@@ -16,13 +16,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\DiplomaProject_ITMO.a2xi5stbbe.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a2xi5stbbe"},{"Name":"integrity","Value":"sha256-HuNDWmXKwmTeT3euGsr3EoTSi5tHGeuUpxcFp8yZfe0="},{"Name":"label","Value":"_content/DiplomaProject_ITMO/DiplomaProject_ITMO.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HuNDWmXKwmTeT3euGsr3EoTSi5tHGeuUpxcFp8yZfe0=\u0022"},{"Name":"Last-Modified","Value":"Fri, 09 May 2025 16:44:22 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HuNDWmXKwmTeT3euGsr3EoTSi5tHGeuUpxcFp8yZfe0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 May 2025 14:00:40 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/DiplomaProject_ITMO/DiplomaProject_ITMO.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\DiplomaProject_ITMO.a2xi5stbbe.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HuNDWmXKwmTeT3euGsr3EoTSi5tHGeuUpxcFp8yZfe0="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HuNDWmXKwmTeT3euGsr3EoTSi5tHGeuUpxcFp8yZfe0=\u0022"},{"Name":"Last-Modified","Value":"Fri, 09 May 2025 16:44:22 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1137"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HuNDWmXKwmTeT3euGsr3EoTSi5tHGeuUpxcFp8yZfe0=\u0022"},{"Name":"Last-Modified","Value":"Sun, 11 May 2025 14:00:40 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/DiplomaProject_ITMO/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
