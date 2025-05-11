@@ -4,8 +4,7 @@ namespace DiplomaProject_ITMO.Models
 {
     public class User
     {
-        public int Id { get; set; } // Первичный ключ
-
+        public int Id { get; set; }
         [Required(ErrorMessage = "Имя пользователя обязательно")]
         [StringLength(100)]
         public string Username { get; set; }
@@ -17,7 +16,7 @@ namespace DiplomaProject_ITMO.Models
 
         [Required(ErrorMessage = "Хеш пароля обязателен")]
         public string PasswordHash { get; set; }
-
         
+
     }
 }

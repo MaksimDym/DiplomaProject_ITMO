@@ -52,17 +52,11 @@ else
 {
     app.UseDeveloperExceptionPage(); // Полезно для отладки в режиме разработки
 }
-
+app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
-// Включение middleware для сессий. Важно: ДО UseAuthorization и ДО MapControllerRoute.
-app.UseSession();
-
-// Если вы используете аутентификацию (например, ASP.NET Core Identity),
-// app.UseAuthentication(); // должно быть перед app.UseAuthorization();
 
 app.UseAuthorization();
 
