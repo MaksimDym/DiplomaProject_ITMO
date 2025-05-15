@@ -1,33 +1,33 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore; // Если используете EF Core
-using DiplomaProject_ITMO.Models; // Замените на ваше пространство имен для моделей (User.cs)
+using Microsoft.EntityFrameworkCore; 
+using DiplomaProject_ITMO.Models; 
 
-using System.Security.Cryptography; // Для хеширования
-using System.Text; // Для хеширования
-using Microsoft.AspNetCore.Http; // Для сессий
+using System.Security.Cryptography;
+using System.Text; 
+using Microsoft.AspNetCore.Http; 
 
 namespace DiplomaProject_ITMO.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly ApplicationDbContext _context; // Замените ApplicationDbContext на ваш DbContext
+        private readonly ApplicationDbContext _context; 
 
-        public AccountController(ApplicationDbContext context) // Замените ApplicationDbContext
+        public AccountController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: /Account/Register
+       
         [HttpGet]
         public IActionResult Register()
         {
-            return View(new RegisterViewModelCustom()); // Используем вашу ViewModel
+            return View(new RegisterViewModelCustom()); 
         }
 
-        // POST: /Account/Register
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterViewModelCustom model) // Используем вашу ViewModel
+        public async Task<IActionResult> Register(RegisterViewModelCustom model) 
         {
             if (ModelState.IsValid)
             {
@@ -75,45 +75,43 @@ namespace DiplomaProject_ITMO.Controllers
       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModelCustom model) // Используем вашу ViewModel
+        public async Task<IActionResult> Login(LoginViewModelCustom model) 
         {
             if (ModelState.IsValid)
             {
-                // В вашей LoginViewModelCustom поле называется UsernameOrEmail
+                
                 var user = await _context.Users.FirstOrDefaultAsync(u =>
                     u.Username == model.UsernameOrEmail || u.Email == model.UsernameOrEmail
                 );
 
-                if (user != null && VerifyPassword(model.Password, user.PasswordHash)) // Ваш метод проверки пароля
+                if (user != null && VerifyPassword(model.Password, user.PasswordHash)) 
                 {
                     HttpContext.Session.SetString("UserId", user.Id.ToString());
                     HttpContext.Session.SetString("Username", user.Username);
-                    // Дополнительно можно сохранять роль или другие данные в сессию, если нужно
-                    // HttpContext.Session.SetString("UserRole", user.Role);
+                   
 
-                    return RedirectToAction("Index", "Home"); // Перенаправление после успешного входа
+                    return RedirectToAction("Index", "Home"); 
                 }
 
                 ModelState.AddModelError(string.Empty, "Неверное имя пользователя или пароль.");
             }
-            return View(model); // Если модель не валидна или вход не удался, возвращаем форму с ошибками
+            return View(model); 
         }
 
-        // POST: /Account/Logout
+     
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Logout()
         {
             HttpContext.Session.Remove("UserId");
             HttpContext.Session.Remove("Username");
-            // Удалите другие данные сессии, если вы их устанавливали
-            // HttpContext.Session.Remove("UserRole");
+            
 
-            return RedirectToAction("Index", "Home"); // Перенаправление после выхода
+            return RedirectToAction("Index", "Home");
         }
 
 
-        // --- Вспомогательные методы для паролей (должны быть в вашем контроллере или сервисе) ---
+      
         private string HashPassword(string password, string salt = null)
         {
             bool newSaltGenerated = false;
@@ -138,7 +136,7 @@ namespace DiplomaProject_ITMO.Controllers
             {
                 var saltedPassword = password + salt; // Простой способ конкатенации, для продакшена рассмотрите HMAC
                 var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(saltedPassword));
-                // Возвращаем хеш и соль вместе, разделенные, например, двоеточием
+              
                 return Convert.ToBase64String(hashedBytes) + ":" + salt;
             }
         }
@@ -147,21 +145,21 @@ namespace DiplomaProject_ITMO.Controllers
         {
             if (string.IsNullOrEmpty(storedPasswordHashWithSalt) || !storedPasswordHashWithSalt.Contains(":"))
             {
-                // Некорректный формат сохраненного хеша или хеш отсутствует
+               
                 return false;
             }
 
             var parts = storedPasswordHashWithSalt.Split(':');
             if (parts.Length != 2)
             {
-                // Некорректный формат сохраненного хеша
+              
                 return false;
             }
 
             var storedHash = parts[0];
             var salt = parts[1];
 
-            // Хешируем введенный пароль с извлеченной солью
+
             string hashedEnteredPasswordAttempt = HashPassword(enteredPassword, salt).Split(':')[0];
 
             return storedHash == hashedEnteredPasswordAttempt;
